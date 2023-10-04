@@ -11,7 +11,7 @@ pipeline {
         stage('Build and Run Script') {
             steps {
                 script {
-                    // Execute the script
+                    sh 'docker build -t script.sh'
                     sh 'bash script.sh'
                 }
             }

@@ -31,6 +31,6 @@ pipeline {
            subject: "Notification Mail From Jenkins",
            body: "CiCd pipeline"
     }
+  }
 }
-
 

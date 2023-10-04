@@ -2,16 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-               git 'https://github.com/Sedhusiva/jenkins-exec.git'
+               sh 'docker build -t script.sh'
             }
         }
 
-        stage('Build and Run Script') {
+        stage('Run Script') {
             steps {
                 script {
-                    sh 'docker build -t script.sh'
                     sh 'bash script.sh'
                 }
             }

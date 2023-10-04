@@ -4,7 +4,7 @@ FROM ubuntu:latest
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
+# Copy the current directory contents into container at /app
 COPY . /app
 
 # To run the file at which port

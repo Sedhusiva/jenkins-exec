@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'docker build -t script.sh .'
+                sh 'docker run --name simplescript script.sh'
             }
         }
 

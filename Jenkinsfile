@@ -22,7 +22,7 @@ pipeline {
       always {
            mail to: "sivasanthi.svs@gmail.com",
            subject: "Notification Mail From Jenkins",
-           body: "CiCd pipeline"
+           body: "The Simplescript Pipeline project Automatic Notification While any change made in commit."
     }
   }
 }

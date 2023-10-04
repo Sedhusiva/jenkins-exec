@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    
-    environment {
-        MY_VARIABLE = 'HelloFromJenkins'
-    }
 
     stages {
         stage('Checkout') {
@@ -15,9 +11,6 @@ pipeline {
         stage('Build and Run Script') {
             steps {
                 script {
-                    // Set an environmental variable for the script
-                    sh 'export MY_VARIABLE=$MY_VARIABLE'
-                    
                     // Execute the script
                     sh 'bash script.sh'
                 }

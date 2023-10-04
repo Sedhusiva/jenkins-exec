@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # To run the file at which port
-EXPOSE 8010
+EXPOSE 80
 
 # Make script.sh executable
 RUN chmod +x script.sh

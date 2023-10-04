@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-repo.git'
+                git 'https://github.com/Sedhusiva/jenkins-exec.git'
             }
         }
 
@@ -26,17 +26,10 @@ pipeline {
     }
 
     post {
-        success {
-            emailext subject: 'Build Success',
-                      body: 'The build was successful. Output:\n' + readFile('script.sh'),
-                      to: 'your-email@example.com'
-        }
-
-        failure {
-            emailext subject: 'Build Failure',
-                      body: 'The build failed. Please check the Jenkins logs for details.',
-                      to: 'your-email@example.com'
-        }
+      always {
+           mail to: "sivasanthi.svs@gmail.com",
+           subject: "Notification Mail From Jenkins",
+           body: "CiCd pipeline"
     }
 }
 

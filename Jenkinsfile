@@ -11,8 +11,8 @@ pipeline {
          stage('Build') {
              steps {
         
-        sh 'docker build -t jenkins-exec .'
-        sh 'docker tag jenkins-exec $DOCKER_MY_VARIABLE'
+        sh 'docker build -t simplescript .'
+        sh 'docker tag simplescript $DOCKER_MY_VARIABLE'
       }
     }
 
@@ -23,6 +23,11 @@ pipeline {
           sh 'docker push $DOCKER_MY_VARIABLE'
         }
       }
+    }
+  }
+    post {
+    always {
+      sh 'docker run --name mysimplescript -d -p 3000:5000 simplescript'
     }
   }
 }

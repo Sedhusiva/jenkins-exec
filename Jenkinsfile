@@ -25,19 +25,5 @@ pipeline {
       }
     }
   }
-
-    post {
-        success {
-            emailext subject: 'Build Success',
-                      body: 'The build was successful.',
-                      to: 'sivasanthi.svs@gmail.com'
-        }
-
-        failure {
-            emailext subject: 'Build Failure',
-                      body: 'The build failed. Please check the Jenkins logs for details.',
-                      to: 'sivasanthi.svs@gmail.com'
-        }
-    }
 }
 

@@ -22,7 +22,7 @@ pipeline {
       always {
            mail to: "sivasanthi.svs@gmail.com",
            subject: "Notification Mail From Jenkins",
-           body: "The Simplescript Pipeline project Automatic Notification While any change made in commit."
+           body: "The Simplescript Pipeline project, Automatic Notification will be sent through email While any change made in commit by adding the webhook in the created and configured repository."
     }
   }
 }
